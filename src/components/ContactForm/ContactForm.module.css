@@ -1,0 +1,9 @@
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.contact-form:nth-child(3) {
+  background-color: brown;
+}

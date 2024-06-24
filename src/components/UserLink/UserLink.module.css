@@ -1,0 +1,23 @@
+.user-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1rem 3rem;
+  border-radius: 30px;
+  color: black;
+  transition: all 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.user-link__left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.user-link:hover {
+  transform: scale(1.01);
+}

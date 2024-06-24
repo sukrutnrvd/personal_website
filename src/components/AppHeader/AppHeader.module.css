@@ -1,0 +1,12 @@
+.app-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem 3rem;
+  width: max-content;
+  gap: 2rem;
+}

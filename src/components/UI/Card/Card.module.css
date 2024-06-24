@@ -1,0 +1,17 @@
+.card {
+  max-width: 30rem;
+  position: relative;
+}
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.card__homepage {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+}

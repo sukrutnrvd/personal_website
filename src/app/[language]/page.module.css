@@ -1,0 +1,12 @@
+.main {
+  height: 100%;
+  display: flex;
+}
+
+@media only screen and (max-width: 48em) {
+  .main {
+    flex-direction: column;
+    overflow-x: hidden;
+    position: static;
+  }
+}

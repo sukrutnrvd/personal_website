@@ -1,0 +1,19 @@
+.links,
+.links__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.links__buttons {
+  width: 100%;
+}
+
+.links {
+  align-items: center;
+}
+
+.links__character {
+  border-radius: 100%;
+  overflow: hidden;
+}
