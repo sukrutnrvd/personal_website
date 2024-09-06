@@ -1,17 +1,19 @@
-import UserLink from "@/components/UserLink/UserLink";
 import { FaGithub, FaInstagram } from "react-icons/fa";
+
 import { FaXTwitter } from "react-icons/fa6";
-import { SiFrontendmentor } from "react-icons/si";
-import { IoIosMail } from "react-icons/io";
-import styles from "./page.module.css";
-import Image from "next/image";
 import { Heading } from "@/components/UI";
+import Image from "next/image";
+import { IoIosMail } from "react-icons/io";
+import { LiaLinkedin } from "react-icons/lia";
 import { Metadata } from "next";
+import { SiFrontendmentor } from "react-icons/si";
+import UserLink from "@/components/UserLink/UserLink";
+import styles from "./page.module.css";
 
 const links = [
   {
     id: 1,
-    href: "https://github.com/hugo0o0/",
+    href: "https://github.com/sukrutnrvd/",
     icon: <FaGithub size={40} />,
     text: "Github",
   },
@@ -30,6 +32,12 @@ const links = [
   },
   {
     id: 4,
+    href: "https://linkedin.com/in/sukrutanriverdi",
+    icon: <LiaLinkedin size={40} />,
+    text: "Linkedin",
+  },
+  {
+    id: 5,
     href: "https://www.frontendmentor.io/profile/Hugo0o0",
     icon: <SiFrontendmentor size={40} />,
     text: "Fronted Mentor",

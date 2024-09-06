@@ -1,11 +1,12 @@
 "use client";
-import { FC } from "react";
-import styles from "./Anonymous.module.css";
-import Link from "next/link";
+
 import Image, { StaticImageData } from "next/legacy/image";
-import { Language } from "@/types";
-import { motion } from "framer-motion";
+
+import { FC } from "react";
 import { Heading } from "../UI";
+import { Language } from "@/types";
+import Link from "next/link";
+import styles from "./AnimatedLinkCard.module.css";
 
 interface AnonymousProps {
   src: StaticImageData;
@@ -13,9 +14,14 @@ interface AnonymousProps {
   link: string;
   language: Language;
 }
-const Anonymous: FC<AnonymousProps> = ({ language, link, src, text }) => {
+const AnimatedLinkCard: FC<AnonymousProps> = ({
+  language,
+  link,
+  src,
+  text,
+}) => {
   return (
-    <Link href={`${language}${link}`} className={styles.anonymous}>
+    <Link href={`${language}${link}`} className={styles["animated-link-card"]}>
       <Image
         objectPosition="center"
         objectFit="cover"
@@ -28,11 +34,11 @@ const Anonymous: FC<AnonymousProps> = ({ language, link, src, text }) => {
         unoptimized
         priority
       />
-      <div className={styles.anonymous__text}>
+      <div className={styles["animated-link-card__text"]}>
         <Heading size="m">{text}</Heading>
       </div>
     </Link>
   );
 };
 
-export default Anonymous;
+export default AnimatedLinkCard;

@@ -1,23 +1,25 @@
 "use client";
-import styles from "./Navigation.module.css";
-import I18NLink from "../I18NLink/I18NLink";
-import LanguagesSelectBox from "../LanguagesSelectBox/LanguagesSelectBox";
-import { IoMenu } from "react-icons/io5";
-import { useParams, usePathname } from "next/navigation";
-import { getDictionary } from "@/lib/getDictionary";
-import { Language } from "@/types";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import { IoMdClose } from "react-icons/io";
-import { useState } from "react";
-import useKeyPress from "@/lib/hooks/useKeyPress";
+
 import { AnimatePresence, motion } from "framer-motion";
+import { useParams, usePathname } from "next/navigation";
+
+import { FaLongArrowAltRight } from "react-icons/fa";
+import I18NLink from "../I18NLink/I18NLink";
+import { IoMdClose } from "react-icons/io";
+import { IoMenu } from "react-icons/io5";
+import { Language } from "@/types";
+import LanguagesSelectBox from "../LanguagesSelectBox/LanguagesSelectBox";
+import { getDictionary } from "@/lib/getDictionary";
+import styles from "./Navigation.module.css";
+import useKeyPress from "@/lib/hooks/useKeyPress";
+import { useState } from "react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language } = useParams<{ language: Language }>();
   const pathname = usePathname().split("/")[2];
 
-  const { aboutMe, contactMe, links, projects, home } = getDictionary(language);
+  const { aboutMe, links, projects, home } = getDictionary(language);
 
   const linkList = [
     {

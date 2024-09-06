@@ -1,17 +1,17 @@
-import Anonymous from "@/components/Anonymous/Anonymous";
-import styles from "./page.module.css";
-import { getDictionary } from "@/lib/getDictionary";
+import AnimatedLinkCard from "@/components/AnimatedLinkCard/AnimatedLinkCard";
+import AppHeader from "@/components/AppHeader/AppHeader";
 import { Language } from "@/types";
 import bg1 from "../../../public/bg11.webp";
 import bg2 from "../../../public/bg12.webp";
 import bg3 from "../../../public/bg15.webp";
-import AppHeader from "@/components/AppHeader/AppHeader";
+import { getDictionary } from "@/lib/getDictionary";
+import styles from "./page.module.css";
 
 export default function Page(props: { params: { language: Language } }) {
   const { aboutMe, projects, links, contactMe } = getDictionary(
     props.params.language
   );
-  const anonymouses = [
+  const linkCards = [
     {
       id: 1,
       text: aboutMe,
@@ -35,12 +35,12 @@ export default function Page(props: { params: { language: Language } }) {
   return (
     <div className={styles.main}>
       <AppHeader />
-      {anonymouses.map((anonymous) => (
-        <Anonymous
-          key={anonymous.id}
-          src={anonymous.src}
-          text={anonymous.text}
-          link={anonymous.href}
+      {linkCards.map((card) => (
+        <AnimatedLinkCard
+          key={card.id}
+          src={card.src}
+          text={card.text}
+          link={card.href}
           language={props.params.language}
         />
       ))}

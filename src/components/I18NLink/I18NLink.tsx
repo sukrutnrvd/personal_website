@@ -1,8 +1,10 @@
 "use client";
-import { motion } from "framer-motion";
+
+import React, { forwardRef } from "react";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { useParams } from "next/navigation";
-import React, { FC, forwardRef } from "react";
 interface I18NLinkProps extends React.ComponentProps<typeof Link> {}
 
 const I18NLink = motion(
